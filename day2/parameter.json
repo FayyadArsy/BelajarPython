@@ -1,0 +1,11 @@
+{
+"Subject" : "Bank Report"
+,"File" : [
+    { "extension" :"xlsx",
+    "sizemax" : "1024000",
+    "startcolumn" : "C",
+    "endcolumn" : "E",
+    "startrow" : "5"
+    }
+]
+}

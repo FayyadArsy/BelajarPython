@@ -3,6 +3,7 @@ from flask import request
 from ..utils import db
 from ..models.users import Users
 from http import HTTPStatus
+from ..logs.log import logger
 
 users_ns = Namespace('users', 'Namespace for users')
 users_model = users_ns.model(
@@ -25,6 +26,7 @@ class UserGetPost(Resource):
         # return {"Status": 200, "Data": []}
             data_users = Users.query.all()
             print("data berhasil:", data_users)
+            logger.info(f"Data User: {data_users}")
             return data_users, HTTPStatus.OK
         except Exception as e:
             print("error:", e)
@@ -49,7 +51,7 @@ class UserGetPost(Resource):
             
             db.session.add(new_input_user)
             db.session.commit()
-            
+            logger.info(f"Input User: {new_user}")
             return [], HTTPStatus.OK
         except Exception as e:
             print("Error post: ", e)

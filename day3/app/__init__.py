@@ -6,6 +6,10 @@ from .config.config import config_dict
 from .views.users import users_ns
 from .utils import db
 from .models import users
+from .models import blogs
+from .logs.log import logger
+
+
 
 def create_app(config=config_dict['dev']):
     app = Flask(__name__)
@@ -20,6 +24,6 @@ def create_app(config=config_dict['dev']):
     )
 
     api.add_namespace(users_ns)
-    # api.add_namespace(users_ns)
     migrate = Migrate(app, db)
+    logger.debug('Initial run API Flask')
     return app

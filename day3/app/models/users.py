@@ -6,5 +6,7 @@ class Users(db.Model):
     username = db.Column(db.String(30), nullable=False, unique=True)
     password = db.Column(db.String(50), nullable=False)
 
+    blogs = db.relationship('Blogs', backref='user', lazy=True)
+
     def __repr__(self):
         return f'<users {self.username}>'

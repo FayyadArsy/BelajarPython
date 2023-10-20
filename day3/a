@@ -1,0 +1,3 @@
+2023-10-20 09:24:53,034 - test_logger - DEBUG - Initial run API Flask
+2023-10-20 09:24:53,430 - werkzeug - INFO -  * Running on http://localhost:5070/ (Press CTRL+C to quit)
+2023-10-20 09:24:55,200 - werkzeug - INFO -  * Detected change in 'D:\\Python\\day3\\app\\__init__.py', reloading

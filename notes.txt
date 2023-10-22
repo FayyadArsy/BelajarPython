@@ -9,6 +9,7 @@ pip install flask==2.0.2 werkzeug==2.0.2
 pip install flask-restx==0.5.1
 pip install python-decouple==3.6 python-dotenv==0.20.0
 pip install Flask-Migrate==3.1.0 Flask-SQLAlchemy==2.5.1 PyMySQL==1.0.2 SQLAlchemy==1.4.39
+pip install flask-JWT-Extended==4.4.3
 
 pip freeze > requirement.txt #mengexport librarti yang terinstall
 

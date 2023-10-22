@@ -11,6 +11,8 @@ class Config:
 class Devconfig(Config):
     SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:''@localhost/latihanapi'
     SQLALCHEMY_RECORD_QUERIES = config('SQLALCHEMY_RECORD_QUERIES', cast=bool)
+
+    
 class Qasconfig(Config):
     pass
 class Prdconfig(Config):
